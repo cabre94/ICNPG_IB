@@ -1,0 +1,14 @@
+Allocated GPU(s) with id(s):  1
+Setting CUDA_VISIBLE_DEVICES=1
+Setting NV_GPU=1
+Hello World from CPU!
+Hello World from GPU!
+Hello World from GPU!
+Hello World from GPU!
+Hello World from GPU!
+Hello World from GPU!
+Hello World from GPU!
+Hello World from GPU!
+Hello World from GPU!
+Hello World from GPU!
+Hello World from GPU!
