@@ -1,4 +1,6 @@
-// solucion en la cpu
+/*
+Suma dos vectores en la CPU
+*/
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -24,7 +26,7 @@ int main(int argc, char **argv){
 
 	int *a, *b, *c;
 
-	// alocacion de memoria de host
+	// allocacion de memoria de host, igual que siempre
 	a = (int *)malloc(N*sizeof(int));
 	b = (int *)malloc(N*sizeof(int));
 	c = (int *)malloc(N*sizeof(int));
@@ -41,8 +43,8 @@ int main(int argc, char **argv){
 	Reloj.tic();
 
 	// suma vectores c[i]=a[i]+b[i], i=0,...,N-1
-	for(int i=0;i<NVECES;i++)
-	VectorAdd(a, b, c, N);
+	for(int i=0; i < NVECES; ++i)
+		VectorAdd(a, b, c, N);
 
 	// imprime milisegundos 
 	printf("CPU: N= %d t= %lf ms\n", N, Reloj.tac());	
