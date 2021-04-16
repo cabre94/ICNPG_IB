@@ -1,0 +1,5 @@
+Allocated GPU(s) with id(s):  0
+Setting CUDA_VISIBLE_DEVICES=0
+Setting NV_GPU=0
+DeviceID: 0
+VectorAdd<<< N, 1 >>>, N= 1024 t= 0.309184 ms

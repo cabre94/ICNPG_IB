@@ -1,0 +1,16 @@
+Allocated GPU(s) with id(s):  0
+Setting CUDA_VISIBLE_DEVICES=0
+Setting NV_GPU=0
+
+Des del host lanzamos
+ Quiensoy<<< dim3(8,8,8), dim3(1,1,1) >>>():
+
+Y los hilos imprimen:
+Soy el thread (0,0,0) del bloque (0,0,0) [blockDim=(8,1,1),gridDim=(1,1,1)] 
+Soy el thread (1,0,0) del bloque (0,0,0) [blockDim=(8,1,1),gridDim=(1,1,1)] 
+Soy el thread (2,0,0) del bloque (0,0,0) [blockDim=(8,1,1),gridDim=(1,1,1)] 
+Soy el thread (3,0,0) del bloque (0,0,0) [blockDim=(8,1,1),gridDim=(1,1,1)] 
+Soy el thread (4,0,0) del bloque (0,0,0) [blockDim=(8,1,1),gridDim=(1,1,1)] 
+Soy el thread (5,0,0) del bloque (0,0,0) [blockDim=(8,1,1),gridDim=(1,1,1)] 
+Soy el thread (6,0,0) del bloque (0,0,0) [blockDim=(8,1,1),gridDim=(1,1,1)] 
+Soy el thread (7,0,0) del bloque (0,0,0) [blockDim=(8,1,1),gridDim=(1,1,1)] 
