@@ -3,7 +3,8 @@ APPS=multmat
 all: ${APPS}
 
 %: %.cu
-	nvcc -O2 -lcublas -DCUBLASXt -DCUBLAS -DSIMPLECPU -DSIMPLECUDA -o $@ $<
+	# nvcc -O2 -lcublas -DCUBLASXt -DCUBLAS -DSIMPLECPU -DSIMPLECUDA -o $@ $<
+	nvcc -O2 -o $@ $<
 
 clean:
 	rm -f ${APPS} *.dat
@@ -11,7 +12,7 @@ clean:
 run:	
 	./multmat_solucion
 
-submit:	
+submit:	clean all
 	qsub jobGPU; watch qstat
 
 
