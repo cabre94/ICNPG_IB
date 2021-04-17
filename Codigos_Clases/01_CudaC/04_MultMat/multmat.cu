@@ -85,7 +85,8 @@ void MatMulcpu(Matrix A, Matrix B, Matrix C){
 
 int main(int argc, const char** argv){
 
-    double t;
+    double tGPU, tCPU;
+    printf("Dim\tGPU [ms]\tCPU [ms]\n");
 
     Matrix A, B, C;
     
@@ -122,9 +123,7 @@ int main(int argc, const char** argv){
 
         RelojGPU.tic();
         MatMul(A, B, C);
-        t = RelojGPU.tac();
-
-        printf("GPU: Dim = %d\tt = %lf ms\n", dim, t);
+        tGPU = RelojGPU.tac();
 
         for(int row=0; row < C.height; ++row){
             for(int col=0; col < C.width; ++col){
@@ -140,9 +139,9 @@ int main(int argc, const char** argv){
         
         RelojCPU.tic();
         MatMulcpu(A, B, C);
-        t = RelojGPU.tac();
+        tCPU = RelojGPU.tac();
 
-        printf("GPU: Dim = %d\tt = %lf ms\n", dim, t);
+        printf("%d\t%lf\t%lf\n", dim, tGPU, tCPU);
 
         for(int row=0; row < C.height; ++row){
             for(int col=0; col < C.width; ++col){
@@ -156,7 +155,7 @@ int main(int argc, const char** argv){
         free(A.elements);
         free(B.elements);
         free(C.elements);
-        
+
         // (4) Comparar CPU vs GPU para distintos tamaños de matriz
     }
 
